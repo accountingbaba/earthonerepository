@@ -1,0 +1,10 @@
+# Redirect www to non-www (canonical domain)
+https://www.earthoneaccounting.com/* https://earthoneaccounting.com/:splat 301
+
+# Legacy flat-file URLs (in case any were shared before folder rename)
+/about.html /about/ 301
+/services.html /services/ 301
+/for-firms.html /for-firms/ 301
+/pricing.html /pricing/ 301
+/contact.html /contact/ 301
+/privacy.html /privacy/ 301

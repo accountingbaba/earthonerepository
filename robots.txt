@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /privacy/
+
+Sitemap: https://earthoneaccounting.com/sitemap.xml
