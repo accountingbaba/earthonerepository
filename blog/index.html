@@ -434,18 +434,5 @@
   rewireFilter();
   rewireReveal();
 </script>
-<script src="../assets/github-content.js"></script>
-<script>
-  (async () => {
-    await window.GithubContent.syncBlogIndex();
-    rewireFilter();
-    rewireReveal();
-    setInterval(async () => {
-      await window.GithubContent.syncBlogIndex();
-      rewireFilter();
-      rewireReveal();
-    }, 30000);
-  })();
-</script>
 </body>
 </html>
