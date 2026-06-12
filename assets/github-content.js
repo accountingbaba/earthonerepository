@@ -1,8 +1,14 @@
 const GITHUB_OWNER = "accountingbaba";
 const GITHUB_REPO = "earthonerepository";
 const GITHUB_BRANCH = "main";
+// For a private repo, set a GitHub Personal Access Token (read-only, public_repo scope).
+// Leave empty ("") for a public repo — no token needed.
+const GITHUB_TOKEN = "";
 
-const GH_HEADERS = { Accept: "application/vnd.github.v3+json" };
+const GH_HEADERS = {
+  Accept: "application/vnd.github.v3+json",
+  ...(GITHUB_TOKEN && { Authorization: `token ${GITHUB_TOKEN}` })
+};
 
 async function ghFetch(path) {
   const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${path}?ref=${GITHUB_BRANCH}`;
