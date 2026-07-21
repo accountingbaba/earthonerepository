@@ -211,7 +211,17 @@
     .footer-legal { display: flex; gap: 24px; }
     @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
     @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } .post-cta-box { padding: 28px 24px; } }
-  </style>
+  
+    .related-posts { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .related-posts h2 { font-size: 20px; font-weight: 800; color: var(--charcoal); margin-bottom: 24px; letter-spacing: -0.02em; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .related-card { background: var(--light); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: transform 0.2s var(--ease-out), box-shadow 0.2s; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .related-card-body { padding: 16px; }
+    .related-card-tag { font-size: 11px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; display: block; }
+    .related-card-title { font-size: 14px; font-weight: 700; color: var(--charcoal); line-height: 1.4; }
+</style>
 
   <script type="application/ld+json">
   {
@@ -487,7 +497,34 @@
       <p>Chartered Accountant with over 10 years of experience across MSME accounting, finance staffing, training and leadership hiring. Founder of the AccountingBaba Group and EarthOne Accounting LLP, which provides qualified CA support to UK accounting firms and businesses at published pricing on one month's notice.</p>
     </div>
 
-  </article>
+  
+    <div class="related-posts">
+      <h2>Related Articles</h2>
+      <div class="related-grid">
+          <a class="related-card" href="../dedicated-team-vs-ticketing-offshore-accounting-uk/">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Dedicated offshore accounting team working on UK firm files" loading="lazy">
+            <div class="related-card-body">
+              <span class="related-card-tag">Outsourcing</span>
+              <div class="related-card-title">UK Firms Sent 86% More Work Offshore in Three Years. The Delivery Model Decided Who It Worked For.</div>
+            </div>
+          </a>
+          <a class="related-card" href="../is-offshore-accounting-outsourcing-safe-uk/">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80" alt="Data security and access control in accounting outsourcing" loading="lazy">
+            <div class="related-card-body">
+              <span class="related-card-tag">Data Security & Compliance</span>
+              <div class="related-card-title">612,000 UK Businesses Were Breached in 2026. Offshore Wasn't the Risk.</div>
+            </div>
+          </a>
+          <a class="related-card" href="../why-uk-accounting-firms-are-turning-away-clients/">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="UK accounting firms turning away clients" loading="lazy">
+            <div class="related-card-body">
+              <span class="related-card-tag">For Firms</span>
+              <div class="related-card-title">Why UK Accounting Firms Are Turning Away Good Clients</div>
+            </div>
+          </a>
+      </div>
+    </div>
+</article>
 
   <aside class="post-sidebar">
     <div class="sidebar-toc">
