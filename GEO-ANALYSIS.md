@@ -151,9 +151,36 @@ The Person schema uses `https://www.linkedin.com/in/ketulpatel` — verify this 
 - [x] Blog articles reference canonical Person entity
 - [x] `llms.txt` present and structured
 - [x] `sitemap.xml` includes all pages
+- [x] IndexNow submission for Bing (implemented 2026-07-21, see below)
 - [ ] Wikipedia / Wikidata entity for brand
 - [ ] Reddit presence (r/UKAccounting)
 - [ ] 134–167 word citability blocks on homepage
 - [ ] Video content (homepage / services)
-- [ ] IndexNow submission for Bing
 - [ ] Verify Ketul Patel LinkedIn URL in schema
+
+---
+
+## Session 2 — 21 July 2026 (full-site SEO/GEO pass)
+
+**Critical, unrelated to GEO:** discovered production had diverged from this git repo — a live blog post existed on the site but not in this checkout, and would have been deleted on the next deploy if pushed over. Reconciled before making any other change. Also discovered mid-session: two more posts were published directly to `main` by the site owner from a separate session while this work was in progress (`mtd-income-tax-quarterly-workload-uk-accounting-firms`, `howden-2026-pi-claims-risk-uk-accounting-firms`) — merged both cleanly and applied the same fixes below to them.
+
+**Found and NOT fixable from this repo:** Cloudflare's edge-level bot management is blocking `GPTBot`, `ClaudeBot`, `Google-Extended`, and `Applebot-Extended` regardless of what `robots.txt` says (confirmed via live fetch — origin robots.txt correctly allows them, but a `# BEGIN Cloudflare Managed content` block at the edge overrides it). This silently undoes the AI-crawler-allowlist work from Session 1. Needs a change in Cloudflare dashboard → Security/Bots (AI Crawl Control), which this session has no access to.
+
+Fixed this session:
+- Sitemap/llms.txt were stale (missing 6+ of 17 posts at different points during the session as new posts kept landing) — kept in sync throughout, ends at all 17
+- `/privacy/` indexing contradiction (Disallow'd + sitemapped + no canonical) resolved: now crawlable, canonical, WebPage-schema-tagged
+- `BreadcrumbList` added to all 17 blog posts; invalid `SearchAction` removed from homepage; `Organization` `about`/`publisher` linking standardized across pricing/for-firms/services/contact; `CollectionPage`+`ItemList` added to blog index (had zero schema)
+- `/blog/read/?slug=` (JS-only duplicate of every static post, fully crawlable with no canonical) — noindex'd
+- Broken `og:image` (pointed to a file that doesn't exist) fixed sitewide — stopgap to an existing logo; a proper 1200×630 social image is still owed (no image-gen tool was authorized this session)
+- Image payload: ~11MB → ~1.7MB (PNG→JPEG on 5 hero/content photos; fixed a CMYK-colorspace JPEG that was silently bloated and a risk for incorrect rendering; resized two oversized logo files)
+- `apple-touch-icon`, `loading="lazy"`, `fetchpriority="high"` added where missing
+- Related Articles module added to 12 of 17 posts (5 already had one) — closes the internal-linking gap the content audit flagged as the top content issue
+- IndexNow implemented: key file + submission script, first bulk submission returned HTTP 202
+
+Still open (needs the site owner, not code):
+- Cloudflare AI-bot block (above)
+- Wikidata entity, Reddit presence — unchanged from Session 1
+- Real case studies/client outcomes — content audit's biggest E-E-A-T gap; nothing to add without real client detail, can't be fabricated
+- Outbound citation links to the named reports (TaxCalc, CIPD, Silverfin, ACCA, ICAEW etc.) — needs verified real URLs, not done this session
+- Proper OG image — needs an image-gen tool authorized, or manual upload
+- Google Search Console / Bing Webmaster Tools — needs account access

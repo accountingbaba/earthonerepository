@@ -81,6 +81,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logos/earthone-favicon-32.png">
   <link rel="shortcut icon" href="../../assets/logos/earthone-favicon-32.png">
+  <link rel="apple-touch-icon" href="../../assets/logos/earthone-appicon-teal.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -252,7 +253,17 @@
     .footer-legal { display: flex; gap: 24px; }
     @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
     @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; align-items: flex-start; } .post-cta-box { padding: 28px 24px; } }
-  </style>
+  
+    .related-posts { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .related-posts h2 { font-size: 20px; font-weight: 800; color: var(--charcoal); margin-bottom: 24px; letter-spacing: -0.02em; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .related-card { background: var(--light); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: transform 0.2s var(--ease-out), box-shadow 0.2s; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .related-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .related-card-body { padding: 16px; }
+    .related-card-tag { font-size: 11px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; display: block; }
+    .related-card-title { font-size: 14px; font-weight: 700; color: var(--charcoal); line-height: 1.4; }
+</style>
 
   <script type="application/ld+json">
   {
@@ -539,7 +550,34 @@
       <p>Chartered Accountant with over 10 years of experience across MSME accounting, finance staffing, training and leadership hiring. Founder of the AccountingBaba Group and EarthOne Accounting LLP, which provides qualified CA support to UK accounting firms and businesses at published pricing on one month's notice.</p>
     </div>
 
-  </article>
+  
+    <div class="related-posts">
+      <h2>Related Articles</h2>
+      <div class="related-grid">
+          <a class="related-card" href="../uk-accountants-lost-billable-hours-2026/">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Accountant surrounded by paperwork representing lost billable hours on low-value work" loading="lazy">
+            <div class="related-card-body">
+              <span class="related-card-tag">Practice Economics</span>
+              <div class="related-card-title">UK Accountants Lose 1.2 Hours a Day to Work That Never Needed Their Qualification.</div>
+            </div>
+          </a>
+          <a class="related-card" href="../cost-of-accountant-turnover-uk-2026/">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Empty desk representing the cost of accountant staff turnover in UK firms" loading="lazy">
+            <div class="related-card-body">
+              <span class="related-card-tag">People & Retention</span>
+              <div class="related-card-title">Replacing a Senior Accountant Now Costs UK Firms Up to £100,000.</div>
+            </div>
+          </a>
+          <a class="related-card" href="../dedicated-team-vs-ticketing-offshore-accounting-uk/">
+            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Dedicated offshore accounting team working on UK firm files" loading="lazy">
+            <div class="related-card-body">
+              <span class="related-card-tag">Outsourcing</span>
+              <div class="related-card-title">UK Firms Sent 86% More Work Offshore in Three Years. The Delivery Model Decided Who It Worked For.</div>
+            </div>
+          </a>
+      </div>
+    </div>
+</article>
 
   <aside class="post-sidebar">
     <div class="sidebar-toc">
