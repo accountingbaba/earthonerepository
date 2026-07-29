@@ -1,5 +1,27 @@
 [
   {
+    "slug": "nottingham-accounting-firm-turnover-case-study-uk",
+    "title": "A 16-Person Nottingham Firm Lost Three Staff in One Quarter. It Wasn't the Pay.",
+    "excerpt": "Exit interviews all named the same cause: unrelenting compliance volume, not salary. How a dedicated offshore team is shrinking the backlog inside the firm's own Xero setup.",
+    "tag": "Case Study",
+    "date": "29 Jul 2026",
+    "dateISO": "2026-07-29",
+    "readtime": "8 min read",
+    "image": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "UK accounting firm team working late through a compliance backlog"
+  },
+  {
+    "slug": "pe-roll-up-uk-accounting-firms-2026",
+    "title": "Private Equity Has Bought Over a Dozen UK Accounting Firms. The Real Question Isn't Whether to Sell Yours.",
+    "excerpt": "One investor-backed group keeps acquiring independent UK firms. Here's what that capital actually buys, and how to build the same capacity without selling.",
+    "tag": "Consolidation & M&A",
+    "date": "28 Jul 2026",
+    "dateISO": "2026-07-28",
+    "readtime": "9 min read",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    "imageAlt": "Independent UK accounting firm weighing growth against a private equity consolidation offer"
+  },
+  {
     "slug": "ecommerce-multi-channel-reconciliation-outsourcing-uk",
     "title": "A Bristol Firm Had 1,200 E-Commerce Payments Landing Daily. Reports Slipped to the 20th.",
     "excerpt": "Four e-commerce clients, four payment platforms, one small team falling behind. How daily overnight reconciliation moved reports back to the 5th working day.",
